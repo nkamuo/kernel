@@ -1,0 +1,33 @@
+{
+  "name": "kernel",
+  "version": "1.0.0",
+  "description": "Front-End Kernel for Javascript",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "npx tsc && dist/test/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkamuo/kernel.git"
+  },
+  "keywords": [
+    "di",
+    "js"
+  ],
+  "author": "Callistus Nkamuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkamuo/kernel/issues"
+  },
+  "homepage": "https://github.com/nkamuo/kernel#readme",
+  "dependencies": {
+    "@raegon/event-dispatcher": "github:nkamuo/event-dispatcher#master",
+    "@raegon/dependency-injection": "github:nkamuo/dependency-injection#master",
+    "emittery": "^1.0.1",
+    "locutus": "^2.0.16"
+  },
+  "devDependencies": {
+    "@types/locutus": "^0.0.8",
+    "@types/node": "^20.11.0"
+  }
+}
