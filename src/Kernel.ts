@@ -341,7 +341,7 @@ export class Kernel {
     //   }
 
 
-    public addBundle(name: string|BundleConstructor, constructor?: BundleConstructor, enabled = true){
+    public addBundle(name: string|BundleConstructor, constructor?: BundleConstructor, enabled = true): this{
         if(!constructor){
             if(typeof(name) !== 'function')
                 throw new Error("Invalid Bundle Data");
@@ -354,6 +354,7 @@ export class Kernel {
 
         this.bundlesFactories[name] = constructor;
         this.enabledBundles[name] = enabled;
+        return this;
     }
 
 
