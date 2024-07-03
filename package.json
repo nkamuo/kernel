@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/nkamuo/kernel#readme",
   "dependencies": {
-    "@raegon/event-dispatcher": "github:nkamuo/event-dispatcher#master",
-    "@raegon/dependency-injection": "github:nkamuo/dependency-injection#master",
+    "@raegon/dependency-injection": "github:nkamuo/dependency-injection",
+    "@raegon/event-dispatcher": "github:nkamuo/event-dispatcher",
     "emittery": "^1.0.1",
     "locutus": "^2.0.16"
   },
