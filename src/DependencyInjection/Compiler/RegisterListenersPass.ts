@@ -21,7 +21,7 @@ export class RegisterListenersPass implements CompilerPass
     public  constructor(dispatcherService = 'event_dispatcher', listenerTag = 'kernel.event_listener', subscriberTag = 'kernel.event_subscriber', eventAliasesParameter = 'event_dispatcher.event_aliases')
     {
         if (0 < arguments.length) {
-            console.warn('raegon/event-dispatcher', '5.3', 'Configuring "%s" is deprecated.');
+            console.warn('@raegon/kernel', '5.3', `Configuring "${this.constructor.name}" is deprecated.`);
         }
 
         this.dispatcherService = dispatcherService;
@@ -38,7 +38,7 @@ export class RegisterListenersPass implements CompilerPass
         this.hotPathEvents = Object.entries(hotPathEvents).reduce((obj: any, [key,value]) =>({...obj, [value]: key}),{});
 
         if (1 < arguments.length) {
-            console.warn('raegon/event-dispatcher', '5.4', 'Configuring "tagName" in "%s" is deprecated.');
+            console.warn('raegon/event-dispatcher', '5.4', `Configuring "tagName" in "${this.constructor.name}" is deprecated.`);
             this.hotPathTagName = arguments[1];
         }
 
@@ -53,7 +53,7 @@ export class RegisterListenersPass implements CompilerPass
         this.noPreloadEvents = array_flip(noPreloadEvents);
 
         if (1 < arguments.length) {
-            console.warn('raegon/event-dispatcher', '5.4', 'Configuring "tagName" in "%s" is deprecated.','setNoPreloadEvents' );
+            console.warn('@raegon/kernel', '5.4', `Configuring "tagName" in "${this.constructor.name}.setNoPreloadEvents" is deprecated.`,'' );
             this.noPreloadTagName = arguments[1];
         }
 
